@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./style.css">
+   <title>Document</title>
+</head>
+<body>
+
+   <div id="clearDiv"></div>
+   <button id="click">Add block</button>
+
+   <script type="text/javascript">
+
+      click.addEventListener('click', () => {
+        let click = document.getElementById('click'); 
+        let div = document.getElementById('clearDiv') 
+        let colorBlock = document.createElement('DIV');
+
+        var newDiv = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' 
+        + (Math.floor(Math.random() * 256)) + ',' 
+        + (Math.floor(Math.random() * 256)) + ')';
+
+        colorBlock.style.backgroundColor = newDiv;
+        div.appendChild(colorBlock);
+      });
+
+      clearDiv.addEventListener('click', (e) => {
+         let clearDiv =  document.getElementById('clearDiv');
+         
+         if (e.target.tagName != 'DIV') {
+           return;
+         }
+        else {
+         clearDiv.removeChild(e.target)
+        }
+      });
+
+
+     
+  
+   </script>
+</body>
+</html>
